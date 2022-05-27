@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  height: 100vh;
+  display: flex;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  padding: 6em 4em;
+}
+
+input {
+  height: 30px;
+  color: white;
+  background: black;
+  outline: none;
+  border: 1px solid grey;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Login Form */
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-form .title-bar {
+  font-size: 25px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form img {
+  width: 50px;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 40px 0;
+}
+
+.login-form label {
+  margin-top: 15px;
+}
+
+.login-form input[type=submit] {
+  background: #f96816;
+  border: none;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.login-form input[type=submit]:hover {
+  background-color: #ff7b39;
+}
+
+.login-form .or {
+  margin: 6px auto;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form .id1, .login-form .id3 {
+  flex: 2;
+}
+
+.login-form .id2 {
+  flex: 1;
+}
+
+.login-form .register {
+  max-width: 200px;
+  margin: auto;
+  border: 2px solid white;
+  padding: 5px 0;
+}
+
+.login-form .form-footer {
+  font-size: 0.8rem;
+  margin-top: 100px;
+}
+
+.login-form .form-footer .tnc, .login-form .tnc a {
+  color: coral;
+}
+
+/* Home Page */
+
+.home-page {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: green;
+  background: url(./images/home-backgound.jpg) no-repeat;
+  background-size: cover;
+}
+
+.home-page .title {
+  font-size: 40px;
+}
+
+.home-page p {
+  border: 2px solid white;
+  padding: 5px 65px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-page {
+    flex: 1;
+  }
+  .home-page .title {
+    font-size: 30px;
+  }
+  .home-page p {
+    border: 2px solid white;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-page {
+    flex: 1;
+  }
+  .home-page .title {
+    font-size: 20px;
+  }
+  .home-page p {
+    font-size: 10;
+    border: 2px solid white;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage {
+    height: auto;
+    overflow: auto;
+  }
+  .container {
+    padding: 1rem 4em;
+  }
+  .login-form form {
+    margin: 30px 0;
+  }
+  .login-form label {
+    margin-top: 8px;
+  }
+  .login-form .form-footer {
+    margin-top: 50px;
+  }
+  .home-page {
+    display: none;
+  }
+  .home-page .title {
+    font-size: 25px;
+  }
+  .home-page p {
+    border: 2px solid white;
+    padding: 0 30px;
+  }
+}
