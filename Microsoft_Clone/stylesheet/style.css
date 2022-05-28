@@ -1,0 +1,231 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navbar */
+
+nav, nav > .navbar, nav .left-part, nav .right-part, nav ul, nav .brand {
+    display: flex;
+}
+
+nav {
+    padding: 10px 0;
+    font-weight: 550;
+    margin: 0;
+}
+
+nav #menu-button {
+    display: none;
+}
+
+nav .navbar {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 25px;
+}
+
+nav > .brand .title {
+    font-size: 22px;
+    padding-left: 8px;
+}
+
+nav li {
+    padding-left: 20px;
+}
+
+nav ul {
+    padding: 0 10px;
+    list-style-type: none;
+}
+
+nav .left-part li:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Top Banner */
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75vh;
+    background: url("../Images/Background_Images/Banner_Background.jpg");
+    background-position: 0 -128px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.top-banner .left-scroll-button, .top-banner .right-scroll-button {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.top-banner > .banner {
+    margin-top: 200px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.banner .title {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.banner .shop-now-button {
+    font-weight: 800;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+/* Card */
+
+.cards {
+    display: grid;
+    text-align: justify;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+.cards img {
+    width: 100%;
+    height: 200px;
+}
+
+.cards .title {
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.cards .learn-more, .cards .shop-now-button {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+/* Highlighted Section */
+
+.highlighted {
+    margin: 15px 0;
+    background: url("../Images/Background_Images/game_pass.jpeg");
+    background-position: -10rem -150px;
+}
+
+.highlighted .black-mirror {
+    padding: 40px 0 0 20px;
+    height: 55vh;
+    background-color: rgba(0, 0, 100, 0.5);
+    color: white;
+}
+
+.highlighted .title {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.highlighted .desc {
+    width: 40%;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.highlighted button {
+    color: white;
+    padding: 10px 20px;
+    font-weight: 800;
+    background-color: black;
+}
+
+/* Last Banner */
+
+.last-banner {
+    height: 20rem;
+    padding: 0 20px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("../Images/Background_Images/rive.jfif") no-repeat;
+    background-size: cover;
+    background-position: 0 -250px;
+    color: white;
+}
+
+.last-banner .contents {
+    width: 60%;
+}
+
+.last-banner .title {
+    font-size: 25px;
+    margin: 10px 0;
+    font-weight: 900;
+}
+
+.last-banner .desc {
+    margin: 10px 0;
+}
+
+.last-banner button {
+    padding: 6px 10px;
+    font-weight: 800;
+}
+
+/* Social */
+
+.social {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+.social img {
+    width: 50px;
+    padding: 10px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 950px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav .navbar .left-part {
+        display: none;
+    }
+    nav .navbar {
+        justify-content: flex-end;
+    }
+    nav ul {
+        padding: 0;
+    }
+    .highlighted {    
+        background-position: -15rem -150px;
+    }
+    nav #menu-button {
+        display: block;
+    }
+}
