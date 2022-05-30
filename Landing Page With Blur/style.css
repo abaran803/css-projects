@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Showcase */
+
+.showcase {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.showcase::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background: url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center/cover;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    display: block;
+    transition: all 800ms;
+}
+
+.showcase .content {
+    width: 32%;
+    z-index: 1;
+    position: absolute;
+    transition: all 800ms;
+}
+
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.showcase:hover .content {
+    filter: blur(4px);
+    -webkit-filter: blur(2px);
+}
+
+.showcase img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.showcase h1 {
+    padding: 5px 0;
+}
+
+/* Resources */
+
+.resources {
+    background: black;
+}
+
+.resources >.container {
+    width: 70%;
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resources .res {
+    width: 25vw;
+}
+
+.resources i {
+    font-size: 35px;
+}
+
+.resources .title {
+    margin: 10px;
+}
+
+/* About */
+
+.about .container {
+    width: 60%;
+    padding: 3rem 0;;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about i {
+    text-align: center;
+    font-size: 7rem;
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+/* Footer */
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .hide-on-small {
+        display: none;
+    }
+    .showcase {
+        height: 60vh;
+    }
+    .showcase .contents {
+        width: 80%;
+        font-size: 22px;
+    }
+    
+    .showcase img {
+        width: 12rem;
+        height: 10rem;
+    }
+
+    .resources >.container {
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .resources .res {
+        width: 70%;
+    }
+
+    .about .container {
+        padding: 2.5rem 0;
+        grid-gap: 1rem;
+        grid-template-columns: auto;
+    }
+    
+    .about .container {
+        height: 60vh;
+        margin: 10px auto;
+    }
+
+    .about i {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    
+}
